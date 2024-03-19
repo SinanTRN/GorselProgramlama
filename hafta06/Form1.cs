@@ -60,8 +60,10 @@ namespace hafta06
             dialog.Filter = "JSon Dosyasý|*.json";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
+               
                 string dosyaYolu = dialog.FileName;
                 File.WriteAllText(dosyaYolu, yazilacak, Encoding.UTF8);
+
             }
 
         }
