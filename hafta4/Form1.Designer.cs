@@ -38,6 +38,8 @@
             button7 = new Button();
             button9 = new Button();
             button8 = new Button();
+            button10 = new Button();
+            datetime = new DateTimePicker();
             SuspendLayout();
             // 
             // button1
@@ -137,15 +139,34 @@
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
             // 
+            // button10
+            // 
+            button10.Location = new Point(187, 70);
+            button10.Name = "button10";
+            button10.Size = new Size(169, 23);
+            button10.TabIndex = 0;
+            button10.Text = "Tarih";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
+            // datetime
+            // 
+            datetime.Location = new Point(372, 93);
+            datetime.Name = "datetime";
+            datetime.Size = new Size(200, 23);
+            datetime.TabIndex = 5;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(datetime);
             Controls.Add(button4);
             Controls.Add(textBox1);
             Controls.Add(button3);
             Controls.Add(button2);
+            Controls.Add(button10);
             Controls.Add(button8);
             Controls.Add(button9);
             Controls.Add(button7);
@@ -170,5 +191,7 @@
         private Button button7;
         private Button button9;
         private Button button8;
+        private Button button10;
+        private DateTimePicker datetime;
     }
 }

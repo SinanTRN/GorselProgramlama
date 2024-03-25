@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hafta4", "hafta4\hafta4.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hafta06", "hafta06\hafta06.csproj", "{68E8F5C0-D189-449B-95AF-C01633A51BBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hafta07", "Hafta07\Hafta07.csproj", "{B0C24D51-72FA-49D7-A678-C7B692889A56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{68E8F5C0-D189-449B-95AF-C01633A51BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68E8F5C0-D189-449B-95AF-C01633A51BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68E8F5C0-D189-449B-95AF-C01633A51BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0C24D51-72FA-49D7-A678-C7B692889A56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C24D51-72FA-49D7-A678-C7B692889A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C24D51-72FA-49D7-A678-C7B692889A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C24D51-72FA-49D7-A678-C7B692889A56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace hafta4
 {
     public partial class Form1 : Form
@@ -84,8 +86,16 @@ namespace hafta4
             FontDialog dialog = new FontDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                textBox1 .Text = dialog.Font.ToString();
+                textBox1.Text = dialog.Font.ToString();
             }
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+            datetime.Value =DateTime.Now.AddDays(10);
+        }
+
+
     }
 }
