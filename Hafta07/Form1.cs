@@ -68,11 +68,11 @@ namespace Hafta07
             komut.CommandText = "SELECT * FROM Ogrenci";
 
             ogrenciler = new DataTable();
-                ogrenciler.Columns.Add("ID");
-                ogrenciler.Columns.Add("Numara");
-                ogrenciler.Columns.Add("isim");
-                ogrenciler.Columns.Add("Soyisim");
-                ogrenciler.Columns.Add("Email");
+            ogrenciler.Columns.Add("ID");
+            ogrenciler.Columns.Add("Numara");
+            ogrenciler.Columns.Add("isim");
+            ogrenciler.Columns.Add("Soyisim");
+            ogrenciler.Columns.Add("Email");
 
             var okuyucu = komut.ExecuteReader();
             while (okuyucu.Read())
@@ -90,13 +90,13 @@ namespace Hafta07
         void kisileriSay()
         {
             int sayi = dgvOgrenciler.Rows.Count - 1;
-            lblSayi.Text = "Öğrenci listesinde " + sayi  + " kişi var...";
+            lblSayi.Text = "Öğrenci listesinde " + sayi + " kişi var...";
         }
         private void btnSil_Click(object sender, EventArgs e)
         {
             try
             {
-                int id = Convert.ToInt32(dgvOgrenciler.SelectedRows[0].Cells[0].Value);
+                int id = Convert.ToInt32(dgvOgrenciler.CurrentRow.Cells[0].Value);
 
                 SQLiteCommand komut = new SQLiteCommand();
                 komut.Connection = baglanti;
@@ -136,7 +136,7 @@ namespace Hafta07
         {
             try
             {
-                int id = Convert.ToInt32(dgvOgrenciler.SelectedRows[0].Cells[0].Value);
+                int id = Convert.ToInt32(dgvOgrenciler.CurrentRow.Cells[0].Value);
 
                 SQLiteCommand komut = new SQLiteCommand();
                 komut.Connection = baglanti;
@@ -147,19 +147,10 @@ namespace Hafta07
                     tabloGuncelle();
             }
             catch (Exception ex) { }
-        }
-        private void dgvOgrenciler_SelectionChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                txtNumara.Text = dgvOgrenciler.SelectedRows[0].Cells[1].Value.ToString();
-                txtIsim.Text = dgvOgrenciler.SelectedRows[0].Cells[2].Value.ToString();
-                txtSoyisim.Text = dgvOgrenciler.SelectedRows[0].Cells[3].Value.ToString();
-                txtEmail.Text = dgvOgrenciler.SelectedRows[0].Cells[4].Value.ToString();
-            }
-            catch (Exception)
-            {
-            }
+            txtNumara.Text = "";
+            txtIsim.Text = "";
+            txtSoyisim.Text = "";
+            txtEmail.Text = "";
         }
 
         private void btnAra_Click(object sender, EventArgs e)
@@ -171,6 +162,15 @@ namespace Hafta07
                 dgvOgrenciler.DataSource = dv;
             }
             catch (Exception) { }
+        }
+
+        private void dgvOgrenciler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNumara.Text = dgvOgrenciler.CurrentRow.Cells[1].Value.ToString();
+            txtIsim.Text = dgvOgrenciler.CurrentRow.Cells[2].Value.ToString();
+            txtSoyisim.Text = dgvOgrenciler.CurrentRow.Cells[3].Value.ToString();
+            if (dgvOgrenciler.CurrentRow.Cells[4].Value!=null)
+                txtEmail.Text = dgvOgrenciler.CurrentRow.Cells[4].Value.ToString();
         }
     }
 }

@@ -56,7 +56,7 @@
             dgvOgrenciler.Name = "dgvOgrenciler";
             dgvOgrenciler.Size = new Size(527, 374);
             dgvOgrenciler.TabIndex = 0;
-            dgvOgrenciler.SelectionChanged += dgvOgrenciler_SelectionChanged;
+            dgvOgrenciler.CellClick += dgvOgrenciler_CellClick;
             // 
             // groupBox1
             // 
