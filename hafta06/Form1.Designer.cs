@@ -87,7 +87,7 @@
             // 
             // btnEkle
             // 
-            btnEkle.Location = new Point(99, 184);
+            btnEkle.Location = new Point(99, 179);
             btnEkle.Name = "btnEkle";
             btnEkle.Size = new Size(120, 23);
             btnEkle.TabIndex = 6;
@@ -205,14 +205,14 @@
             // yükleTsmi
             // 
             yükleTsmi.Name = "yükleTsmi";
-            yükleTsmi.Size = new Size(180, 22);
+            yükleTsmi.Size = new Size(110, 22);
             yükleTsmi.Text = "Yükle";
             yükleTsmi.Click += yükleTsmi_Click;
             // 
             // kaydetTsmi
             // 
             kaydetTsmi.Name = "kaydetTsmi";
-            kaydetTsmi.Size = new Size(180, 22);
+            kaydetTsmi.Size = new Size(110, 22);
             kaydetTsmi.Text = "Kaydet";
             kaydetTsmi.Click += kaydetTsmi_Click;
             // 
